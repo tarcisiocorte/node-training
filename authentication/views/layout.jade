@@ -8,6 +8,7 @@ head
   link(rel='icon', href='../../favicon.ico')
   title Sticky Footer Navbar Template for Bootstrap
   link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+  link(href='/stylesheets/style.css', rel='stylesheet')
 // Fixed navbar
 body
   nav.navbar.navbar-default(role='navigation')
@@ -32,6 +33,7 @@ body
              a(href='/users/logout') Logout         
       // /.nav-collapse
 .container
+ != messages()
  block content
 
 script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
