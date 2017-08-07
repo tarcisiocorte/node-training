@@ -27,6 +27,23 @@ var UserSchema = mongoose.Schema({
 
 var User = module.exports = mongoose.model('User', UserSchema);
 
+module.exports.getUserById = function(id, callback){
+    User.findById(id, callback);
+}
+
+module.exports.getUserByUsername = function(username, callback){
+    var query = {username: username};
+    User.findOne({query, callback});
+}
+
+module.exports.comparePassword = function(candidatePassowrd, hash, callback){
+    console.log('comparePassword - start');
+    bcrypt.compare(candidatePassowrd, hash, function(err, isMach) {
+        callback(null, isMach);
+        console.log('comparePassword - end');
+    });
+}
+
 module.exports.createUser = function (newUser, callback) {
     bcrypt.genSalt(10, function(err, salt) {
     bcrypt.hash(newUser.password, salt, function(err, hash) {
