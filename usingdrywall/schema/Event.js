@@ -5,7 +5,7 @@ exports = module.exports = function(app, mongoose) {
     pivot: { type: String, default: '' },
     name: { type: String,required:true},
     description: {type: String},
-     venu: {type: String},
+    venu: {type: String},
     date: {type: Date},
     startTime: {type: String},
     endTime: {type:String},
