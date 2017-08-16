@@ -1,15 +1,9 @@
 import Vue from 'vue'
+import {Time} from './time';
 
 new Vue({
-  el: '#application',
+  el: '#app',
   data: {
-    titulo: "Minha primeira aplicação com Vue.js 2",
-    bool: true,
-    numeroInteiro: 10,
-    numeroFloat: 20.30,
-    objeto: {
-      name: "Tarcísio Corte"
-    },
-    link: "https://localhost:8080"
+    time: new Time('Time x' , 'escudo')
   }
-})
+});
