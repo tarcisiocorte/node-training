@@ -4,6 +4,13 @@ import {Time} from './time';
 new Vue({
   el: '#app',
   data: {
+        alfabeto: {
+        a: "A",
+        b: "B",
+        c: "C",
+        d: "D",
+        e: "E"
+      },
     times: [
             new Time('Palmeiras', require('./assets/palmeiras_60x60.png')),
             new Time('Flamengo', require('./assets/flamengo_60x60.png')),
@@ -25,6 +32,6 @@ new Vue({
             new Time('Figueirense', require('./assets/figueirense_60x60.png')),
             new Time('Santa Cruz', require('./assets/santa_cruz_60x60.png')),
             new Time('América-MG', require('./assets/america_mg_60x60.png')),
-    ], 
+    ] 
   }
 });
