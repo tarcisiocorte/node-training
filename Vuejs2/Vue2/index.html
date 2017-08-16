@@ -6,14 +6,12 @@
   </head>
   <body>
     <div id="application">
-      <h1>
-        {{ titulo }}
-        {{ titulo }}
-        {{ titulo }}
-        {{ titulo }}
-        {{ titulo }}
-        {{ titulo }}
-      </h1>
+      <h1 v-bind:id="numeroInteiro">numeroInteiro: {{ numeroInteiro }}</h1>
+      <a v-bind:href="link">link test..</a>
+      {{ bool }}      
+      {{ numeroFloat }}
+      {{ objeto }}
+      {{objeto.name}}
     </div>
     <script src="/dist/build.js"></script>
   </body>
