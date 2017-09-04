@@ -88,5 +88,3 @@ const env = process.env.NODE_ENV || 'development'
 if (env === 'development') {
 	return gulp.task('default', ['build', 'watch'])
 }
-
-//gulp.task('default', ['build', 'watch'])
